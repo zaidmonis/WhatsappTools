@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="top"
+    tools:context="zaidstudios.whatsapptools.ItemOneFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout1">
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:id="@+id/codeButton"
+            android:text="+91"
+            android:drawableRight="@drawable/drop_down"
+            />
+        <EditText
+            android:id="@+id/editno"
+            android:layout_width="337dp"
+            android:layout_weight="90"
+            android:layout_height="wrap_content"
+            android:hint="Enter No."
+            android:inputType="number">
+        </EditText>
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/editmsg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/linearLayout1"
+        android:gravity="top"
+        android:hint="Enter Message(Optional)"
+        android:inputType="textCapSentences" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editmsg"
+        android:layout_centerHorizontal="true"
+        android:text="open in Whatsapp"
+
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editmsg" />
+
+</RelativeLayout>
