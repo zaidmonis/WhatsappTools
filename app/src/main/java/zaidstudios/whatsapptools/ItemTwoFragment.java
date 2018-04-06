@@ -40,6 +40,7 @@ public class ItemTwoFragment extends Fragment {
 
         File fil = new File(Environment.getExternalStorageDirectory(), "Whatsapp/Media/.Statuses");
         list = imageReader(fil);
+        getActivity().setTitle("Image Statuses");
 
 
         gv = (GridView) myView.findViewById(R.id.gridView);

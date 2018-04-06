@@ -19,7 +19,7 @@
             android:layout_weight="10"
             android:id="@+id/codeButton"
             android:text="+91"
-            android:drawableRight="@drawable/drop_down"
+            android:drawableRight="@drawable/drop"
             />
         <EditText
             android:id="@+id/editno"
@@ -27,6 +27,7 @@
             android:layout_weight="90"
             android:layout_height="wrap_content"
             android:hint="Enter No."
+            android:maxLength="10"
             android:inputType="number">
         </EditText>
     </LinearLayout>

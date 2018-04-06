@@ -37,6 +37,7 @@ public class ItemThreeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View myView2 = inflater.inflate(R.layout.fragment_item_three, container, false);
+        getActivity().setTitle("Video Statuses");
 
         File fil2 = new File(Environment.getExternalStorageDirectory(), "Whatsapp/Media/.Statuses");
         list2 = imageReader2(fil2);

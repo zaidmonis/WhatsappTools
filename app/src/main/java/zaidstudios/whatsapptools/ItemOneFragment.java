@@ -25,6 +25,7 @@ public class ItemOneFragment extends Fragment {
     private EditText editno, editmsg;
     private Button button, codeButton;
     private String url, msg;
+    private View myView;
 
     public static ItemOneFragment newInstance() {
         ItemOneFragment fragment = new ItemOneFragment();
@@ -37,13 +38,15 @@ public class ItemOneFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View myView = inflater.inflate(R.layout.fragment_item_one, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        myView = inflater.inflate(R.layout.fragment_item_one, container, false);
         editno = myView.findViewById(R.id.editno);
         editmsg = myView.findViewById(R.id.editmsg);
-        button = myView.findViewById(R.id.button);
-        codeButton = myView.findViewById(R.id.codeButton);
+        button = (Button)myView.findViewById(R.id.button);
+        codeButton =(Button) myView.findViewById(R.id.codeButton);
+        getActivity().setTitle("Open in Whatsapp");
+
         codeButton.setBackgroundColor(Color.TRANSPARENT);
 
         codeButton.setOnClickListener(new View.OnClickListener() {
