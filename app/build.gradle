@@ -38,4 +38,5 @@ dependencies {
     compile 'commons-io:commons-io:2.4'
 
     compile 'com.github.mukeshsolanki:country-picker-android:1.2.2'
+    compile 'com.github.fenjuly:ArrowDownloadButton:9e15b85e8a'
 }

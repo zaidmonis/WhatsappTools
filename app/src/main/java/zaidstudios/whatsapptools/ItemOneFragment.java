@@ -79,6 +79,9 @@ public class ItemOneFragment extends Fragment {
                 if (url.isEmpty()){
                     Toast.makeText(getActivity(), "Enter Whatsapp Number!", Toast.LENGTH_SHORT).show();
                 }
+                else if (url.length()<8){
+                    Toast.makeText(getActivity(), "Number too short!", Toast.LENGTH_SHORT).show();
+                }
                 else{
                     url = "https://api.whatsapp.com/send?phone="+codeButton.getText() + url + "&text=" + msg;
                     Intent intent = new Intent(Intent.ACTION_VIEW);

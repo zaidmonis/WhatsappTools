@@ -95,7 +95,6 @@ public class ItemTwoFragment extends Fragment {
         for(int i = 0 ; i<files.length ; i++){
             if (files[i].isDirectory()){
                 a.addAll(imageReader(files[i]));
-                Toast.makeText(getActivity(), "Here!", Toast.LENGTH_SHORT).show();
             }
             else{
                 if (files[i].getName().endsWith(".jpg") && files[i].length()>1000){
