@@ -22,6 +22,8 @@ import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import zaidstudios.rawderm.whatsapptools.R;
+
 public class VideoActivity extends AppCompatActivity {
 
     VideoView videoView;

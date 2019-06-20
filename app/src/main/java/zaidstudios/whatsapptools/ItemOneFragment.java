@@ -19,6 +19,8 @@ import com.mukesh.countrypicker.Country;
 import com.mukesh.countrypicker.CountryPicker;
 import com.mukesh.countrypicker.OnCountryPickerListener;
 
+import zaidstudios.rawderm.whatsapptools.R;
+
 import static android.media.tv.TvContract.Programs.Genres.encode;
 
 public class ItemOneFragment extends Fragment {

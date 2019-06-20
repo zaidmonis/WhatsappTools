@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="zaidstudios.whatsapptools">
+    package="zaidstudios.rawderm.whatsapptools">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/igg"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity android:name="zaidstudios.whatsapptools.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,15 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".ImageActivity"
-            android:parentActivityName=".MainActivity">
+        <activity android:name="zaidstudios.whatsapptools.ImageActivity"
+            android:parentActivityName="zaidstudios.whatsapptools.MainActivity">
         </activity>
-
-        <activity android:name=".VideoActivity"
-            android:parentActivityName=".MainActivity">
+        <activity android:name="zaidstudios.whatsapptools.VideoActivity"
+            android:parentActivityName="zaidstudios.whatsapptools.MainActivity">
         </activity>
-
     </application>
-
 </manifest>

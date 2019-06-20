@@ -18,6 +18,8 @@ import com.bumptech.glide.Glide;
 import java.io.File;
 import java.util.ArrayList;
 
+import zaidstudios.rawderm.whatsapptools.R;
+
 public class ItemTwoFragment extends Fragment {
     GridView gv;
     ArrayList<File> list;

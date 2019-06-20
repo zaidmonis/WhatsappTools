@@ -12,6 +12,8 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import zaidstudios.rawderm.whatsapptools.R;
+
 
 public class MainActivity extends AppCompatActivity {
     int STORAGE_PERMISSION_CODE;
@@ -83,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean isReadStorageAllowed() {
         //Getting the permission status
-        int result = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
+        int result = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
 
         //If permission is granted returning true
         if (result == PackageManager.PERMISSION_GRANTED)
@@ -96,12 +98,12 @@ public class MainActivity extends AppCompatActivity {
     //Requesting permission
     private void requestStoragePermission(){
 
-        if (ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.READ_EXTERNAL_STORAGE)){
-            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},STORAGE_PERMISSION_CODE);
+        if (ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.WRITE_EXTERNAL_STORAGE)){
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},STORAGE_PERMISSION_CODE);
         }
 
         //And finally ask for the permission
-        ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},STORAGE_PERMISSION_CODE);
+        ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},STORAGE_PERMISSION_CODE);
     }
 
 
@@ -117,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
                 //Permission Granted
             }else{
                 //permission is not granted, Requesting again
-                ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},STORAGE_PERMISSION_CODE);
+                ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},STORAGE_PERMISSION_CODE);
             }
         }
     }

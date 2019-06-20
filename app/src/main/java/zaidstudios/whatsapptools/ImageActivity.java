@@ -23,6 +23,8 @@ import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import zaidstudios.rawderm.whatsapptools.R;
+
 public class ImageActivity extends AppCompatActivity {
 
     ImageView fullImage;
@@ -42,7 +44,7 @@ public class ImageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 File source = new File(s);
-                String descPath = Environment.getExternalStorageDirectory() + "/Pictures/WA Tools/WAImages";
+                String descPath = Environment.getExternalStorageDirectory() + "/WA Tools/WAImages";
                 File desc = new File(descPath);
                 try{
                     desc.mkdir();
@@ -53,6 +55,7 @@ public class ImageActivity extends AppCompatActivity {
                 try
                 {
                     FileUtils.copyFileToDirectory(source, desc, true);
+                    scan(getApplicationContext(), "external");
                     downloadButton.startAnimating();
                     Timer timer = new Timer();
                     timer.schedule(new TimerTask() {
@@ -86,9 +89,6 @@ public class ImageActivity extends AppCompatActivity {
         });
     }
 
-
-
-    //To start the Media Scanning, so that the saved images could appear in Gallery.
     private static void scan(Context context, String volume) {
         Bundle args = new Bundle();
         args.putString("volume", volume);
