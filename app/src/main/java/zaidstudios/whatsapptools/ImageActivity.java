@@ -44,7 +44,7 @@ public class ImageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 File source = new File(s);
-                String descPath = Environment.getExternalStorageDirectory() + "/WA Tools/WAImages";
+                String descPath = Environment.getExternalStorageDirectory() + "/Pictures/WA Tools/WAImages";
                 File desc = new File(descPath);
                 try{
                     desc.mkdir();

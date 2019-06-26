@@ -43,7 +43,7 @@ public class VideoActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 File source = new File(s);
-                String descPath = Environment.getExternalStorageDirectory() + "/Pictures/WA Tools/WAImages";
+                String descPath = Environment.getExternalStorageDirectory() + "/Pictures/WA Tools/WAVideos";
                 File desc = new File(descPath);
                 try{
                     desc.mkdir();
